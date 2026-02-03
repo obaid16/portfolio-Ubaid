@@ -12,29 +12,29 @@ const Portfolio = () => {
   const [cursorClicked, setCursorClicked] = useState(false);
   const cursorRef = useRef({ x: 0, y: 0 });
 
-  // Custom cursor animation
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      cursorRef.current = { x: e.clientX, y: e.clientY };
-      setCursorVisible(true);
-    };
+  // // // Custom cursor animation
+  // // useEffect(() => {
+  // //   const handleMouseMove = (e) => {
+  // //     cursorRef.current = { x: e.clientX, y: e.clientY };
+  // //     setCursorVisible(true);
+  // //   };
 
-    const animateCursor = () => {
-      setCursorPos(prev => ({
-        x: prev.x + (cursorRef.current.x - prev.x) * 0.15,
-        y: prev.y + (cursorRef.current.y - prev.y) * 0.15
-      }));
-      requestAnimationFrame(animateCursor);
-    };
+  //   const animateCursor = () => {
+  //     setCursorPos(prev => ({
+  //       x: prev.x + (cursorRef.current.x - prev.x) * 0.15,
+  //       y: prev.y + (cursorRef.current.y - prev.y) * 0.15
+  //     }));
+  //     requestAnimationFrame(animateCursor);
+  //   };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    const animation = requestAnimationFrame(animateCursor);
+  //   document.addEventListener('mousemove', handleMouseMove);
+  //   const animation = requestAnimationFrame(animateCursor);
 
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      cancelAnimationFrame(animation);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener('mousemove', handleMouseMove);
+  //     cancelAnimationFrame(animation);
+  //   };
+  // }, []);
 
   useEffect(() => {
     const handleMouseDown = () => setCursorClicked(true);
@@ -97,7 +97,7 @@ const Portfolio = () => {
       category: 'UI Design',
       tags: ['Figma', 'UI/UX', 'Mobile Design', 'Prototyping'],
       link: 'YOUR_UBER_PROJECT_LINK_HERE',
-      image: '/images/uber-project.jpg'
+      image: '/uber.jpg'
     },
     {
       title: 'Analytics Dashboard',
@@ -105,7 +105,7 @@ const Portfolio = () => {
       category: 'Dashboard Design',
       tags: ['Figma', 'Data Viz', 'Web Design', 'Charts'],
       link: 'YOUR_DASHBOARD_PROJECT_LINK_HERE',
-      image: '/images/dashboard-project.jpg'
+      image: '/dashboard.jpg'
     },
     {
       title: 'Snapdeal Clone',
@@ -113,7 +113,7 @@ const Portfolio = () => {
       category: 'UI Design',
       tags: ['Figma', 'E-commerce', 'Mobile First', 'User Flow'],
       link: 'YOUR_SNAPDEAL_PROJECT_LINK_HERE',
-      image: '/images/snapdeal-project.jpg'
+      image: '/snapdeal.jpg'
     }
   ];
 
