@@ -291,7 +291,9 @@ const Portfolio = () => {
             </h1>
 
             <p className="text-[clamp(1.05rem,2vw,1.25rem)] text-gray-600 mb-12 leading-[1.75] font-normal animate-[fadeInUp_0.8s_ease_0.6s_backwards]">
-              I&apos;
+              I&apos;m a Figma specialist who combines the power of AI/ML with user-centered design
+              to create beautiful, intelligent interfaces. Currently mastering modern web technologies
+              while crafting exceptional user experiences.
             </p>
 
             <div className="flex flex-wrap gap-[0.85rem] mb-14 animate-[fadeInUp_0.8s_ease_0.8s_backwards]">
