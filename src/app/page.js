@@ -11,6 +11,7 @@ const Portfolio = () => {
   const [cursorClicked, setCursorClicked] = useState(false);
   const [modalData, setModalData] = useState(null);
   const [modalTab, setModalTab] = useState('preview');
+  const [certificateModal, setCertificateModal] = useState(null);
   const cursorRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -71,49 +72,105 @@ const Portfolio = () => {
 
   const figmaProjects = [
     {
+      title: 'Gozoop Clone',
+      description: 'A modern redesign of the Gozoop digital marketing agency website, featuring bold visuals, engaging animations, and a streamlined user experience that showcases creative services effectively.',
+      category: 'Agency Website',
+      tags: ['Figma', 'UI/UX', 'Web Design', 'Corporate'],
+      image: '/gozoop-clone.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/gozoop-clone'
+    },
+    {
+      title: 'RedBus Clone',
+      description: 'Complete redesign of India\'s leading bus booking platform with improved search functionality, intuitive seat selection interface, and seamless booking flow for enhanced user experience.',
+      category: 'Travel & Booking',
+      tags: ['Figma', 'UI/UX', 'Booking System', 'Mobile First'],
+      image: '/redbus-clone.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/redbus-clone'
+    },
+    {
       title: 'Uber App Clone',
-      description: 'A complete redesign of the Uber mobile app experience, focusing on improved navigation, cleaner interface, and enhanced user flow for booking rides.',
-      category: 'UI Design',
+      description: 'A complete redesign of the Uber mobile app experience, focusing on improved navigation, cleaner interface, and enhanced user flow for booking rides with real-time tracking.',
+      category: 'Mobile App',
       tags: ['Figma', 'UI/UX', 'Mobile Design', 'Prototyping'],
-      image: '/uber.png',
+      image: '/uber-clone.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/uber-app-clone'
     },
     {
-      title: 'Analytics Dashboard',
-      description: 'Modern analytics dashboard with data visualization, real-time metrics, and intuitive controls. Designed for optimal data presentation and user interaction.',
-      category: 'Dashboard Design',
-      tags: ['Figma', 'Data Viz', 'Web Design', 'Charts'],
-      image: '/dashboard.png',
-      figmaUrl: 'https://www.figma.com/file/EXAMPLE/analytics-dashboard'
+      title: 'TEKsystems Clone',
+      description: 'Professional redesign of TEKsystems IT staffing and services website, featuring modern layouts, clear service presentation, and optimized user journey for B2B interactions.',
+      category: 'Corporate Website',
+      tags: ['Figma', 'B2B', 'Web Design', 'Professional'],
+      image: '/teksystems-clone.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/teksystems-clone'
+    },
+    {
+      title: 'Raymond Clone',
+      description: 'Elegant e-commerce redesign for Raymond luxury menswear brand, emphasizing premium aesthetics, sophisticated product showcases, and refined shopping experience.',
+      category: 'E-commerce',
+      tags: ['Figma', 'Luxury Brand', 'E-commerce', 'Fashion'],
+      image: '/raymond-clone.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/raymond-clone'
     },
     {
       title: 'Snapdeal Clone',
       description: 'Complete e-commerce redesign of Snapdeal with modern UI patterns, improved product discovery, streamlined checkout flow, and enhanced mobile shopping experience for better conversions.',
-      category: 'UI Design',
+      category: 'E-commerce',
       tags: ['Figma', 'E-commerce', 'Mobile First', 'User Flow'],
-      image: '/snapdeal.png',
+      image: '/snapdeal-clone.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/snapdeal-clone'
+    },
+    {
+      title: 'Practo Clone',
+      description: 'Healthcare platform redesign focused on easy doctor discovery, seamless appointment booking, patient-friendly interface, and comprehensive health record management system.',
+      category: 'Healthcare Platform',
+      tags: ['Figma', 'Healthcare', 'Booking System', 'UI/UX'],
+      image: '/practo-clone.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/practo-clone'
+    },
+    {
+      title: 'Campus Website',
+      description: 'Modern university campus website design featuring student-centric navigation, event management, academic resources, and vibrant layouts that reflect campus life and culture.',
+      category: 'Educational Website',
+      tags: ['Figma', 'Education', 'Web Design', 'Institutional'],
+      image: '/campus-website.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/campus-website'
+    },
+    {
+      title: 'Pharmaceutical Website',
+      description: 'Professional pharmaceutical company website design with focus on product information, research showcase, compliance standards, and accessible healthcare solutions.',
+      category: 'Healthcare Website',
+      tags: ['Figma', 'Healthcare', 'Corporate', 'B2B'],
+      image: '/pharmaceutical-website.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/pharmaceutical-website'
+    },
+    {
+      title: 'Netflix Logo Animation',
+      description: 'Creative motion design project featuring smooth, eye-catching Netflix logo animation with dynamic transitions, perfect timing, and engaging visual effects.',
+      category: 'Motion Design',
+      tags: ['Figma', 'Animation', 'Motion Graphics', 'Branding'],
+      image: '/netflix-animation.png',
+      figmaUrl: 'https://www.figma.com/file/EXAMPLE/netflix-logo-animation'
     }
   ];
 
   const developmentProjects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce application built with Next.js and React, featuring product management, shopping cart, checkout flow, and payment integration with Stripe.',
-      category: 'Full Stack Development',
-      tags: ['Next.js', 'React', 'Node.js', 'Stripe API'],
-      image: '/ecommerce-dev.png',
-      liveUrl: 'https://example-ecommerce.vercel.app',
-      repoUrl: 'https://github.com/yourusername/ecommerce-platform'
+      title: 'Analytics Dashboard',
+      description: 'A responsive analytics dashboard built with pure HTML, CSS, and Tailwind CSS featuring data visualization cards, responsive grid layouts, and modern UI components for displaying metrics.',
+      category: 'Frontend Development',
+      tags: ['HTML', 'CSS', 'Tailwind CSS', 'Responsive'],
+      image: '/dashboard-dev.png',
+      liveUrl: 'https://example-dashboard.vercel.app',
+      repoUrl: 'https://github.com/obaid16/analytics-dashboard'
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, team collaboration features, and intuitive drag-and-drop interface built with modern web technologies.',
-      category: 'Web Application',
-      tags: ['React', 'Tailwind CSS', 'Firebase', 'Real-time'],
-      image: '/task-app.png',
-      liveUrl: 'https://example-taskapp.vercel.app',
-      repoUrl: 'https://github.com/yourusername/task-management-app'
+      title: 'YouTube Clone',
+      description: 'A pixel-perfect YouTube clone interface built using HTML, CSS, and Tailwind CSS. Features responsive video grid, sidebar navigation, search functionality, and authentic YouTube styling.',
+      category: 'Frontend Development',
+      tags: ['HTML', 'CSS', 'Tailwind CSS', 'Clone Project'],
+      image: '/youtube-clone.png',
+      liveUrl: 'https://example-youtube-clone.vercel.app',
+      repoUrl: 'https://github.com/obaid16/youtube-clone'
     }
   ];
 
@@ -135,48 +192,53 @@ const Portfolio = () => {
   ];
 
   const tools = [
-    { name: 'Figma', icon: 'fab fa-figma', level: 'Expert' },
-    { name: 'HTML', icon: 'fab fa-html5', level: 'Advanced' },
-    { name: 'CSS', icon: 'fab fa-css3-alt', level: 'Advanced' },
-    { name: 'Tailwind CSS', icon: 'fas fa-wind', level: 'Advanced' },
-    { name: 'JavaScript', icon: 'fab fa-js', level: 'Advanced' },
-    { name: 'React.js', icon: 'fab fa-react', level: 'Intermediate' },
-    { name: 'Next.js', icon: 'fas fa-code', level: 'Intermediate' },
-    { name: 'Node.js', icon: 'fab fa-node-js', level: 'Intermediate' },
-    { name: 'MongoDB', icon: 'fas fa-database', level: 'Intermediate' },
-    { name: 'Git', icon: 'fab fa-git-alt', level: 'Advanced' },
-    { name: 'GitHub', icon: 'fab fa-github', level: 'Advanced' },
-    { name: 'WordPress', icon: 'fab fa-wordpress', level: 'Intermediate' }
+    { name: 'Figma', icon: 'fab fa-figma', level: 'Expert', percentage: 95 },
+    { name: 'HTML', icon: 'fab fa-html5', level: 'Advanced', percentage: 90 },
+    { name: 'CSS', icon: 'fab fa-css3-alt', level: 'Advanced', percentage: 88 },
+    { name: 'Tailwind CSS', icon: 'fas fa-wind', level: 'Advanced', percentage: 85 },
+    { name: 'JavaScript', icon: 'fab fa-js', level: 'Beginner', percentage: 40 },
+    { name: 'React.js', icon: 'fab fa-react', level: 'Beginner', percentage: 40 },
+    { name: 'Next.js', icon: 'fas fa-code', level: 'Intermediate', percentage: 70 },
+    { name: 'Node.js', icon: 'fab fa-node-js', level: 'Intermediate', percentage: 72 },
+    { name: 'MongoDB', icon: 'fas fa-database', level: 'Beginner', percentage: 25 },
+    { name: 'Git', icon: 'fab fa-git-alt', level: 'Beginner', percentage: 30 },
+    { name: 'GitHub', icon: 'fab fa-github', level: 'Beginner', percentage: 35 },
+    { name: 'WordPress', icon: 'fab fa-wordpress', level: 'Intermediate', percentage: 65 }
   ];
 
   const certifications = [
     {
-      title: 'UI/UX Design Specialization',
-      issuer: 'Coursera',
-      date: 'January 2025',
-      icon: 'fas fa-certificate',
-      color: 'cyan'
-    },
-    {
-      title: 'Machine Learning Fundamentals',
-      issuer: 'Google AI',
-      date: 'December 2024',
+      title: 'AI For All - AI Aware',
+      issuer: 'Intel & Digital India',
+      date: 'January 2026',
       icon: 'fas fa-brain',
-      color: 'violet'
+      color: 'cyan',
+      image: '/ai-aware-cert.png',
+      badge: '/ai-aware-badge.png',
+      description: 'Completed the AI Aware stage of Intel\'s AI For All program in partnership with Digital India and Central Board of Secondary Education. This certification demonstrates foundational understanding of Artificial Intelligence concepts and their real-world applications.',
+      skills: ['AI Fundamentals', 'Machine Learning Basics', 'AI Ethics', 'Real-world AI Applications']
     },
     {
-      title: 'Advanced Figma Design',
-      issuer: 'Figma Academy',
-      date: 'November 2024',
-      icon: 'fab fa-figma',
-      color: 'cyan'
+      title: 'AI For All - AI Appreciate',
+      issuer: 'Intel & Digital India',
+      date: 'January 2026',
+      icon: 'fas fa-brain',
+      color: 'violet',
+      image: '/ai-appreciate-cert.png',
+      badge: '/ai-appreciate-badge.png',
+      description: 'Successfully completed the AI Appreciate stage of Intel\'s AI For All program. This advanced level certification showcases deeper understanding of AI technologies, their societal impact, and practical implementation strategies.',
+      skills: ['Advanced AI Concepts', 'AI Impact Assessment', 'Problem Solving with AI', 'AI Implementation']
     },
     {
-      title: 'Full Stack Web Development',
-      issuer: 'freeCodeCamp',
-      date: 'October 2024',
-      icon: 'fas fa-code',
-      color: 'amber'
+      title: 'Yuva AI For ALL - English',
+      issuer: 'Intel & Digital India',
+      date: 'January 21, 2026',
+      icon: 'fas fa-graduation-cap',
+      color: 'amber',
+      image: '/yuva-ai-certificate.png',
+      certificateId: 'ZmchD5eq8Y',
+      description: 'Successfully completed the Yuva AI For ALL program in English, demonstrating comprehensive understanding of Artificial Intelligence concepts and applications tailored for youth empowerment and skill development.',
+      skills: ['AI Literacy', 'Youth Leadership in AI', 'Practical AI Applications', 'Innovation Mindset']
     }
   ];
 
@@ -193,7 +255,7 @@ const Portfolio = () => {
       title: 'LinkedIn',
       icon: 'fab fa-linkedin',
       description: 'Connect with me professionally and see my career journey.',
-      link: 'https://www.instagram.com/ubaidxsk?igsh=dzM2cDJwNTZ1OHZi',
+      link: 'https://www.linkedin.com/in/obaid-shaikh-79716639a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
       linkText: 'Visit Profile',
       external: true
     },
@@ -305,47 +367,47 @@ const Portfolio = () => {
           {/* Hero Content */}
           <div className="max-w-[720px]">
             <div className="flex gap-4 mb-10 flex-wrap animate-[fadeInUp_0.8s_ease_0.2s_backwards]">
-              <div className="inline-flex items-center gap-[0.6rem] px-5 py-[0.6rem] rounded-full text-sm font-semibold transition-all duration-300 bg-cyan-600/10 border-[1.5px] border-cyan-600/30 text-cyan-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-600/20 hover:border-cyan-600">
-                <div className="w-5 h-5 bg-gradient-to-br from-cyan-600 to-violet-600 rounded flex items-center justify-center text-white text-[0.7rem] font-bold">
-                  <i className="fab fa-figma" />
-                </div>
-                <span>Figma UI/UX Designer</span>
-              </div>
               <div className="inline-flex items-center gap-[0.6rem] px-5 py-[0.6rem] rounded-full text-sm font-semibold transition-all duration-300 bg-violet-600/10 border-[1.5px] border-violet-600/30 text-violet-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-violet-600/20 hover:border-violet-600">
-                <div className="w-5 h-5 bg-gradient-to-br from-cyan-600 to-violet-600 rounded flex items-center justify-center text-white text-[0.7rem] font-bold">
-                  <i className="fas fa-robot" />
+                <div className="w-5 h-5 bg-gradient-to-br from-violet-600 to-cyan-600 rounded flex items-center justify-center text-white text-[0.7rem] font-bold">
+                  <i className="fas fa-brain" />
                 </div>
                 <span>AI/ML Student</span>
+              </div>
+              <div className="inline-flex items-center gap-[0.6rem] px-5 py-[0.6rem] rounded-full text-sm font-semibold transition-all duration-300 bg-cyan-600/10 border-[1.5px] border-cyan-600/30 text-cyan-600 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-cyan-600/20 hover:border-cyan-600">
+                <div className="w-5 h-5 bg-gradient-to-br from-cyan-600 to-violet-600 rounded flex items-center justify-center text-white text-[0.7rem] font-bold">
+                  <i className="fas fa-code" />
+                </div>
+                <span>Full-Stack Developer</span>
               </div>
             </div>
 
             <h1 className="text-[clamp(2.5rem,6vw,4.5rem)] font-black leading-[1.1] tracking-[-0.03em] mb-8 animate-[fadeInUp_0.8s_ease_0.4s_backwards] text-gray-900">
-              Designing{' '}
-              <span className="bg-gradient-to-r from-cyan-600 via-cyan-400 to-violet-600 bg-clip-text text-transparent bg-[length:200%_200%] animate-[gradientMove_4s_ease_infinite]">
+              Building{' '}
+              <span className="bg-gradient-to-r from-violet-600 via-cyan-400 to-violet-600 bg-clip-text text-transparent bg-[length:200%_200%] animate-[gradientMove_4s_ease_infinite]">
                 intelligent
               </span>
               <br />
-              experiences with AI
+              systems with AI
             </h1>
 
             <p className="text-[clamp(1.05rem,2vw,1.25rem)] text-gray-600 mb-12 leading-[1.75] font-normal animate-[fadeInUp_0.8s_ease_0.6s_backwards]">
-              I&apos;m a Figma specialist who combines the power of AI/ML with user-centered design
-              to create beautiful, intelligent interfaces. Currently mastering modern web technologies
-              while crafting exceptional user experiences.
+              I&apos;m an AI/ML student and full-stack developer passionate about creating intelligent 
+              systems that solve real-world problems. I combine machine learning expertise with modern 
+              web technologies to build innovative applications that make a difference.
             </p>
 
             <div className="flex gap-5 flex-wrap animate-[fadeInUp_0.8s_ease_1s_backwards]">
               <a
                 href="#projects"
                 onClick={(e) => scrollToSection(e, '#projects')}
-                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-gradient-to-br from-cyan-600 to-violet-600 text-white shadow-lg shadow-cyan-600/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-600/40"
+                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-gradient-to-br from-violet-600 to-cyan-600 text-white shadow-lg shadow-violet-600/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-600/40"
               >
                 View Projects
               </a>
               <a
                 href="#contact"
                 onClick={(e) => scrollToSection(e, '#contact')}
-                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-white text-gray-900 border-[1.5px] border-gray-200 shadow-sm hover:border-cyan-600/50 hover:-translate-y-1 hover:shadow-md hover:bg-cyan-600/5"
+                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-white text-gray-900 border-[1.5px] border-gray-200 shadow-sm hover:border-violet-600/50 hover:-translate-y-1 hover:shadow-md hover:bg-violet-600/5"
               >
                 Get In Touch
               </a>
@@ -443,20 +505,32 @@ const Portfolio = () => {
                 </div>
               </div>
 
-              {/* Stats */}
+              {/* Stats - Now Clickable */}
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 animate-[fadeInUp_0.8s_ease_0.8s_backwards]">
-                <div className="text-center group cursor-default">
-                  <div className="text-4xl font-black text-cyan-600 mb-2 group-hover:scale-110 transition-transform duration-300">5+</div>
+                <a
+                  href="#projects"
+                  onClick={(e) => scrollToSection(e, '#projects')}
+                  className="text-center group cursor-pointer no-underline transition-all duration-300 hover:scale-105"
+                >
+                  <div className="text-4xl font-black text-cyan-600 mb-2 group-hover:scale-110 transition-transform duration-300">12+</div>
                   <div className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Projects</div>
-                </div>
-                <div className="text-center group cursor-default">
+                </a>
+                <a
+                  href="#tools"
+                  onClick={(e) => scrollToSection(e, '#tools')}
+                  className="text-center group cursor-pointer no-underline transition-all duration-300 hover:scale-105"
+                >
                   <div className="text-4xl font-black text-violet-600 mb-2 group-hover:scale-110 transition-transform duration-300">12+</div>
                   <div className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Technologies</div>
-                </div>
-                <div className="text-center group cursor-default">
-                  <div className="text-4xl font-black text-amber-500 mb-2 group-hover:scale-110 transition-transform duration-300">4</div>
+                </a>
+                <a
+                  href="#certifications"
+                  onClick={(e) => scrollToSection(e, '#certifications')}
+                  className="text-center group cursor-pointer no-underline transition-all duration-300 hover:scale-105"
+                >
+                  <div className="text-4xl font-black text-amber-500 mb-2 group-hover:scale-110 transition-transform duration-300">3</div>
                   <div className="text-sm font-semibold text-gray-600 uppercase tracking-wide">Certifications</div>
-                </div>
+                </a>
               </div>
 
               {/* CTA */}
@@ -509,7 +583,7 @@ const Portfolio = () => {
               </div>
               Figma Design Projects
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
               {figmaProjects.map((project, index) => (
                 <div
                   key={index}
@@ -526,7 +600,7 @@ const Portfolio = () => {
                       fill
                       className="object-cover transition-transform duration-400 group-hover:scale-110 group-hover:rotate-2"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-violet-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
                       <span className="text-white font-bold text-lg bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/50 flex items-center gap-2 animate-[pulse_2s_ease-in-out_infinite]">
                         <i className="fas fa-external-link-alt"></i>
                         Open Figma
@@ -534,8 +608,8 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <div className="p-9">
-                    <span className="inline-block px-4 py-[0.4rem] bg-cyan-600/10 border border-cyan-600/30 rounded-full text-xs font-bold text-cyan-600 uppercase tracking-wide mb-5">
-                      {project.category}
+                    <span className="inline-block px-4 py-[0.4rem] bg-gradient-to-r from-violet-600/10 to-cyan-600/10 border border-violet-600/30 rounded-full text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-cyan-600 uppercase tracking-wide mb-5">
+                      <span className="text-violet-600">{project.category}</span>
                     </span>
                     <h3 className="text-[1.65rem] font-extrabold mb-4 tracking-[-0.02em] text-gray-900">
                       {project.title}
@@ -547,7 +621,7 @@ const Portfolio = () => {
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-4 py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-cyan-600 hover:text-cyan-600 hover:bg-cyan-600/5"
+                          className="px-4 py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-violet-600 hover:text-violet-600 hover:bg-violet-600/5"
                         >
                           {tag}
                         </span>
@@ -584,7 +658,7 @@ const Portfolio = () => {
                       fill
                       className="object-cover transition-transform duration-400 group-hover:scale-110 group-hover:rotate-2"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-violet-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
                       <span className="text-white font-bold text-lg bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/50 flex items-center gap-2 animate-[pulse_2s_ease-in-out_infinite]">
                         <i className="fas fa-external-link-alt"></i>
                         Open Project
@@ -592,8 +666,8 @@ const Portfolio = () => {
                     </div>
                   </div>
                   <div className="p-9">
-                    <span className="inline-block px-4 py-[0.4rem] bg-violet-600/10 border border-violet-600/30 rounded-full text-xs font-bold text-violet-600 uppercase tracking-wide mb-5">
-                      {project.category}
+                    <span className="inline-block px-4 py-[0.4rem] bg-gradient-to-r from-cyan-600/10 to-violet-600/10 border border-cyan-600/30 rounded-full text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-600 uppercase tracking-wide mb-5">
+                      <span className="text-cyan-600">{project.category}</span>
                     </span>
                     <h3 className="text-[1.65rem] font-extrabold mb-4 tracking-[-0.02em] text-gray-900">
                       {project.title}
@@ -605,7 +679,7 @@ const Portfolio = () => {
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-4 py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-violet-600 hover:text-violet-600 hover:bg-violet-600/5"
+                          className="px-4 py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-cyan-600 hover:text-cyan-600 hover:bg-cyan-600/5"
                         >
                           {tag}
                         </span>
@@ -653,7 +727,7 @@ const Portfolio = () => {
               <div className="w-full h-[75vh] rounded-lg overflow-hidden shadow-2xl bg-white p-4">
                 <div className="flex items-center justify-center gap-4 mb-4">
                   <button
-                    className={`px-4 py-2 rounded-lg font-semibold ${modalTab === 'preview' ? 'bg-cyan-600 text-white' : 'bg-gray-100 text-gray-700'}`}
+                    className={`px-4 py-2 rounded-lg font-semibold ${modalTab === 'preview' ? 'bg-violet-600 text-white' : 'bg-gray-100 text-gray-700'}`}
                     onClick={(e) => { e.stopPropagation(); setModalTab('preview'); }}
                   >
                     Preview
@@ -700,6 +774,126 @@ const Portfolio = () => {
             )}
 
             <p className="text-white/70 text-sm text-center mt-4">Click outside to close</p>
+          </div>
+        </div>
+      )}
+
+      {/* Certificate Modal */}
+      {certificateModal && (
+        <div
+          className="fixed inset-0 bg-black/90 z-[10001] flex items-center justify-center p-4 animate-[fadeIn_0.3s_ease] overflow-y-auto"
+          onClick={() => setCertificateModal(null)}
+        >
+          <button
+            className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white text-2xl transition-all duration-200 hover:scale-110 z-10"
+            onClick={(e) => { e.stopPropagation(); setCertificateModal(null); }}
+          >
+            <i className="fas fa-times"></i>
+          </button>
+
+          <div className="max-w-[95vw] max-h-[95vh] w-full md:w-[900px] relative bg-white rounded-2xl overflow-hidden my-8" onClick={(e) => e.stopPropagation()}>
+            {/* Header */}
+            <div className={`p-8 ${
+              certificateModal.color === 'cyan' ? 'bg-gradient-to-r from-cyan-600 to-cyan-400' :
+              certificateModal.color === 'violet' ? 'bg-gradient-to-r from-violet-600 to-violet-400' :
+              'bg-gradient-to-r from-amber-500 to-amber-400'
+            }`}>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl text-white">
+                  <i className={certificateModal.icon} />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-black text-white">{certificateModal.title}</h2>
+                  <p className="text-white/90 font-medium">{certificateModal.issuer} • {certificateModal.date}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="p-8 max-h-[calc(95vh-200px)] overflow-y-auto">
+              {/* Certificate Image */}
+              {certificateModal.image && (
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Certificate</h3>
+                  <div className="border-2 border-gray-200 rounded-xl overflow-hidden shadow-lg">
+                    <Image
+                      src={certificateModal.image}
+                      alt={certificateModal.title + ' Certificate'}
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Badge Image */}
+              {certificateModal.badge && (
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Badge</h3>
+                  <div className="flex justify-center">
+                    <div className="w-64 h-64 relative">
+                      <Image
+                        src={certificateModal.badge}
+                        alt={certificateModal.title + ' Badge'}
+                        width={256}
+                        height={256}
+                        className="w-full h-full object-contain drop-shadow-2xl"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Description */}
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">About this Certification</h3>
+                <p className="text-gray-600 leading-relaxed">{certificateModal.description}</p>
+              </div>
+
+              {/* Skills */}
+              {certificateModal.skills && (
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Skills Covered</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {certificateModal.skills.map((skill, index) => (
+                      <span
+                        key={index}
+                        className={`px-4 py-2 rounded-lg font-semibold text-sm ${
+                          certificateModal.color === 'cyan' ? 'bg-cyan-600/10 text-cyan-600 border border-cyan-600/30' :
+                          certificateModal.color === 'violet' ? 'bg-violet-600/10 text-violet-600 border border-violet-600/30' :
+                          'bg-amber-500/10 text-amber-500 border border-amber-500/30'
+                        }`}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Verification Badge */}
+              <div className={`p-6 rounded-xl ${
+                certificateModal.color === 'cyan' ? 'bg-cyan-600/5 border-2 border-cyan-600/20' :
+                certificateModal.color === 'violet' ? 'bg-violet-600/5 border-2 border-violet-600/20' :
+                'bg-amber-500/5 border-2 border-amber-500/20'
+              }`}>
+                <div className="flex items-center gap-3">
+                  <i className={`fas fa-badge-check text-3xl ${
+                    certificateModal.color === 'cyan' ? 'text-cyan-600' :
+                    certificateModal.color === 'violet' ? 'text-violet-600' :
+                    'text-amber-500'
+                  }`}></i>
+                  <div>
+                    <h4 className="font-bold text-gray-900">Verified Certification</h4>
+                    <p className="text-sm text-gray-600">This certificate has been officially issued by {certificateModal.issuer}</p>
+                    {certificateModal.certificateId && (
+                      <p className="text-xs text-gray-500 mt-1 font-mono">Certificate ID: {certificateModal.certificateId}</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
@@ -832,11 +1026,32 @@ const Portfolio = () => {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-12 mt-12">
               {tools.map((tool, index) => (
                 <div key={index} className="text-center transition-all duration-300 animate-[fadeInUp_0.6s_ease_backwards]" style={{ animationDelay: `${0.7 + index * 0.05}s` }}>
-                  <div className="w-[88px] h-[88px] mx-auto mb-6 bg-white border-[1.5px] border-gray-200 rounded-[20px] flex items-center justify-center text-5xl shadow-sm transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl hover:border-cyan-600/50 hover:bg-cyan-600/5 hover:rotate-6">
+                  <div className="w-[88px] h-[88px] mx-auto mb-6 bg-white border-[1.5px] border-gray-200 rounded-[20px] flex items-center justify-center text-5xl shadow-sm transition-all duration-300 hover:-translate-y-2.5 hover:shadow-xl hover:border-cyan-600/50 hover:bg-cyan-600/5 hover:rotate-6 relative group">
                     <i className={tool.icon + ' text-cyan-600'} />
+                    {/* Percentage Badge */}
+                    <div className="absolute -top-2 -right-2 w-10 h-10 bg-gradient-to-br from-violet-600 to-cyan-600 rounded-full flex items-center justify-center text-white text-xs font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      {tool.percentage}%
+                    </div>
                   </div>
                   <div className="font-bold text-gray-900 mb-2 text-[1.05rem]">{tool.name}</div>
-                  <div className="text-[0.9rem] text-gray-600 font-medium">{tool.level}</div>
+                  <div className="text-[0.9rem] text-gray-600 font-medium mb-3">{tool.level}</div>
+                  {/* Progress Bar with Percentage */}
+                  <div className="mt-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-semibold text-gray-500">Proficiency</span>
+                      <span className="text-sm font-bold bg-gradient-to-r from-violet-600 to-cyan-600 bg-clip-text text-transparent">
+                        {tool.percentage}%
+                      </span>
+                    </div>
+                    <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden shadow-inner">
+                      <div 
+                        className="h-full bg-gradient-to-r from-violet-600 to-cyan-600 rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
+                        style={{ width: `${tool.percentage}%` }}
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-[shimmer_2s_infinite]"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -862,11 +1077,12 @@ const Portfolio = () => {
         </div>
 
         <div className="max-w-[1280px] mx-auto relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1000px] mx-auto">
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-white border-[1.5px] border-gray-200 rounded-3xl p-8 transition-all duration-[400ms] relative overflow-hidden group hover:-translate-y-3 hover:shadow-2xl hover:border-cyan-600/50 animate-[scaleIn_0.8s_ease_backwards]"
+                onClick={() => setCertificateModal(cert)}
+                className="bg-white border-[1.5px] border-gray-200 rounded-3xl p-8 transition-all duration-[400ms] relative overflow-hidden group hover:-translate-y-3 hover:shadow-2xl hover:border-cyan-600/50 animate-[scaleIn_0.8s_ease_backwards] cursor-pointer"
                 style={{ animationDelay: `${0.6 + index * 0.1}s` }}
               >
                 <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${
@@ -911,8 +1127,8 @@ const Portfolio = () => {
                     cert.color === 'violet' ? 'text-violet-600' :
                     'text-amber-500'
                   }`}>
-                    <i className="fas fa-badge-check"></i>
-                    Certified
+                    <i className="fas fa-eye"></i>
+                    Click to View
                   </span>
                 </div>
               </div>
@@ -1006,7 +1222,7 @@ const Portfolio = () => {
                   <i className="fas fa-envelope" />
                 </a>
                 <a
-                  href="https://www.instagram.com/ubaidxsk?igsh=dzM2cDJwNTZ1OHZi"
+                  href="https://www.linkedin.com/in/obaid-shaikh-79716639a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 flex items-center justify-center bg-gray-100 border-[1.5px] border-gray-200 rounded-xl text-gray-600 no-underline text-xl transition-all duration-200 shadow-sm hover:-translate-y-1 hover:border-cyan-600 hover:text-cyan-600 hover:shadow-md hover:bg-cyan-600/5"
@@ -1058,7 +1274,7 @@ const Portfolio = () => {
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <i className="fab fa-github text-cyan-600 mt-1"></i>
+                  <i className="fas fa-github text-cyan-600 mt-1"></i>
                   <a 
                     href="https://github.com/obaid16"
                     target="_blank"
@@ -1068,30 +1284,18 @@ const Portfolio = () => {
                     github.com/obaid16
                   </a>
                 </li>
-                <li className="flex items-start gap-3">
-                  <i className="fas fa-map-marker-alt text-cyan-600 mt-1"></i>
-                  <span className="text-gray-600">Available for Remote Work</span>
-                </li>
               </ul>
             </div>
           </div>
 
           {/* Divider */}
           <div className="border-t border-gray-200 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-gray-600 text-center md:text-left">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+              <p className="text-gray-600 text-center">
                 © 2026 Obaidullah Shaikh. All rights reserved. Designed with{' '}
                 <span className="text-cyan-600 font-bold">Figma</span> & built with{' '}
                 <span className="text-cyan-600 font-bold">passion</span>.
               </p>
-              <div className="flex gap-6 text-sm">
-                <a href="#" className="text-gray-600 hover:text-cyan-600 transition-colors duration-200 no-underline font-medium">
-                  Privacy Policy
-                </a>
-                <a href="#" className="text-gray-600 hover:text-cyan-600 transition-colors duration-200 no-underline font-medium">
-                  Terms of Service
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -1213,6 +1417,15 @@ const Portfolio = () => {
           }
           100% {
             transform: rotate(360deg);
+          }
+        }
+
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
           }
         }
       `}</style>
