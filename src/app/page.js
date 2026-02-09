@@ -179,11 +179,6 @@ const Portfolio = () => {
     setModalTab('figma');
   };
 
-  const openDevModal = (project) => {
-    setModalData({ type: 'dev', liveUrl: project.liveUrl, repoUrl: project.repoUrl, title: project.title });
-    setModalTab('preview');
-  };
-
   const learningPath = [
     { name: 'JavaScript ES6+', icon: 'fab fa-js', status: 'In Progress' },
     { name: 'React.js', icon: 'fab fa-react', status: 'In Progress' },
@@ -633,7 +628,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Development Projects */}
+          {/* Development Projects - UPDATED TO OPEN IN NEW TAB */}
           <div>
             <h3 className="text-3xl font-bold mb-8 text-gray-900 flex items-center gap-3 animate-[fadeInUp_0.8s_ease_1.1s_backwards]">
               <div className="w-10 h-10 bg-violet-600/10 rounded-lg flex items-center justify-center">
@@ -648,9 +643,12 @@ const Portfolio = () => {
                   className="bg-white border-[1.5px] border-gray-200 rounded-3xl overflow-hidden transition-all duration-[400ms] hover:-translate-y-3 hover:shadow-2xl hover:border-violet-600/50 animate-[scaleIn_0.8s_ease_backwards]"
                   style={{ animationDelay: `${1.2 + index * 0.1}s` }}
                 >
-                  <div 
-                    className="w-full h-[280px] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group cursor-pointer"
-                    onClick={() => openDevModal(project)}
+                  {/* CHANGED: Now opens in new tab */}
+                  <a 
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full h-[280px] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group cursor-pointer block"
                   >
                     <Image
                       src={project.image}
@@ -664,7 +662,7 @@ const Portfolio = () => {
                         Open Project
                       </span>
                     </div>
-                  </div>
+                  </a>
                   <div className="p-9">
                     <span className="inline-block px-4 py-[0.4rem] bg-gradient-to-r from-cyan-600/10 to-violet-600/10 border border-cyan-600/30 rounded-full text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-600 uppercase tracking-wide mb-5">
                       <span className="text-cyan-600">{project.category}</span>
@@ -693,7 +691,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Modal for Figma embeds and Dev previews */}
+      {/* Modal for Figma embeds only */}
       {modalData && (
         <div
           className="fixed inset-0 bg-black/90 z-[10001] flex items-center justify-center p-4 animate-[fadeIn_0.3s_ease]"
@@ -719,57 +717,6 @@ const Portfolio = () => {
                   onClick={(e) => e.stopPropagation()}
                   title={modalData.title}
                 />
-              </div>
-            )}
-
-            {/* Development preview / code */}
-            {modalData.type === 'dev' && (
-              <div className="w-full h-[75vh] rounded-lg overflow-hidden shadow-2xl bg-white p-4">
-                <div className="flex items-center justify-center gap-4 mb-4">
-                  <button
-                    className={`px-4 py-2 rounded-lg font-semibold ${modalTab === 'preview' ? 'bg-violet-600 text-white' : 'bg-gray-100 text-gray-700'}`}
-                    onClick={(e) => { e.stopPropagation(); setModalTab('preview'); }}
-                  >
-                    Preview
-                  </button>
-                  <button
-                    className={`px-4 py-2 rounded-lg font-semibold ${modalTab === 'code' ? 'bg-cyan-600 text-white' : 'bg-gray-100 text-gray-700'}`}
-                    onClick={(e) => { e.stopPropagation(); setModalTab('code'); }}
-                  >
-                    Code
-                  </button>
-                </div>
-
-                <div className="w-full h-[calc(100% - 64px)]">
-                  {modalTab === 'preview' ? (
-                    modalData.liveUrl ? (
-                      <iframe
-                        src={modalData.liveUrl}
-                        className="w-full h-full border-0"
-                        title={modalData.title + ' - Preview'}
-                        onClick={(e) => e.stopPropagation()}
-                      />
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-700">No live preview URL provided.</div>
-                    )
-                  ) : (
-                    modalData.repoUrl ? (
-                      <div className="w-full h-full overflow-auto p-4">
-                        <a
-                          href={modalData.repoUrl}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-cyan-600 font-bold break-all"
-                        >
-                          {modalData.repoUrl}
-                        </a>
-                        <div className="mt-4 text-sm text-gray-700">Open the repository in a new tab to view the source code.</div>
-                      </div>
-                    ) : (
-                      <div className="w-full h-full flex items-center justify-center text-gray-700">No repository link provided.</div>
-                    )
-                  )}
-                </div>
               </div>
             )}
 
@@ -898,6 +845,9 @@ const Portfolio = () => {
         </div>
       )}
 
+      {/* Rest of sections remain the same... */}
+      {/* I'll include the remaining sections in the continuation */}
+      
       {/* Expertise Section */}
       <section id="expertise" className="py-20 px-[5%] relative z-10 bg-gray-50 overflow-hidden">
         {/* Animated Background Elements */}
