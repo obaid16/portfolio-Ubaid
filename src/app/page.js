@@ -76,7 +76,7 @@ const Portfolio = () => {
       description: 'A modern redesign of the Gozoop digital marketing agency website, featuring bold visuals, engaging animations, and a streamlined user experience that showcases creative services effectively.',
       category: 'Agency Website',
       tags: ['Figma', 'UI/UX', 'Web Design', 'Corporate'],
-      image: '/gozoop-clone.png',
+      image: '/gozoop.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/gozoop-clone'
     },
     {
@@ -84,7 +84,7 @@ const Portfolio = () => {
       description: 'Complete redesign of India\'s leading bus booking platform with improved search functionality, intuitive seat selection interface, and seamless booking flow for enhanced user experience.',
       category: 'Travel & Booking',
       tags: ['Figma', 'UI/UX', 'Booking System', 'Mobile First'],
-      image: '/redbus-clone.png',
+      image: '/red bus.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/redbus-clone'
     },
     {
@@ -92,23 +92,15 @@ const Portfolio = () => {
       description: 'A complete redesign of the Uber mobile app experience, focusing on improved navigation, cleaner interface, and enhanced user flow for booking rides with real-time tracking.',
       category: 'Mobile App',
       tags: ['Figma', 'UI/UX', 'Mobile Design', 'Prototyping'],
-      image: '/uber-clone.png',
+      image: '/uber.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/uber-app-clone'
-    },
-    {
-      title: 'TEKsystems Clone',
-      description: 'Professional redesign of TEKsystems IT staffing and services website, featuring modern layouts, clear service presentation, and optimized user journey for B2B interactions.',
-      category: 'Corporate Website',
-      tags: ['Figma', 'B2B', 'Web Design', 'Professional'],
-      image: '/teksystems-clone.png',
-      figmaUrl: 'https://www.figma.com/file/EXAMPLE/teksystems-clone'
     },
     {
       title: 'Raymond Clone',
       description: 'Elegant e-commerce redesign for Raymond luxury menswear brand, emphasizing premium aesthetics, sophisticated product showcases, and refined shopping experience.',
       category: 'E-commerce',
       tags: ['Figma', 'Luxury Brand', 'E-commerce', 'Fashion'],
-      image: '/raymond-clone.png',
+      image: '/raymond.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/raymond-clone'
     },
     {
@@ -116,23 +108,15 @@ const Portfolio = () => {
       description: 'Complete e-commerce redesign of Snapdeal with modern UI patterns, improved product discovery, streamlined checkout flow, and enhanced mobile shopping experience for better conversions.',
       category: 'E-commerce',
       tags: ['Figma', 'E-commerce', 'Mobile First', 'User Flow'],
-      image: '/snapdeal-clone.png',
+      image: '/snapdeal.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/snapdeal-clone'
-    },
-    {
-      title: 'Practo Clone',
-      description: 'Healthcare platform redesign focused on easy doctor discovery, seamless appointment booking, patient-friendly interface, and comprehensive health record management system.',
-      category: 'Healthcare Platform',
-      tags: ['Figma', 'Healthcare', 'Booking System', 'UI/UX'],
-      image: '/practo-clone.png',
-      figmaUrl: 'https://www.figma.com/file/EXAMPLE/practo-clone'
     },
     {
       title: 'Campus Website',
       description: 'Modern university campus website design featuring student-centric navigation, event management, academic resources, and vibrant layouts that reflect campus life and culture.',
       category: 'Educational Website',
       tags: ['Figma', 'Education', 'Web Design', 'Institutional'],
-      image: '/campus-website.png',
+      image: '/campus.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/campus-website'
     },
     {
@@ -140,7 +124,7 @@ const Portfolio = () => {
       description: 'Professional pharmaceutical company website design with focus on product information, research showcase, compliance standards, and accessible healthcare solutions.',
       category: 'Healthcare Website',
       tags: ['Figma', 'Healthcare', 'Corporate', 'B2B'],
-      image: '/pharmaceutical-website.png',
+      image: '/pharmaceutical.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/pharmaceutical-website'
     },
     {
@@ -148,7 +132,7 @@ const Portfolio = () => {
       description: 'Creative motion design project featuring smooth, eye-catching Netflix logo animation with dynamic transitions, perfect timing, and engaging visual effects.',
       category: 'Motion Design',
       tags: ['Figma', 'Animation', 'Motion Graphics', 'Branding'],
-      image: '/netflix-animation.png',
+      image: '/netflix.png',
       figmaUrl: 'https://www.figma.com/file/EXAMPLE/netflix-logo-animation'
     }
   ];
@@ -529,11 +513,11 @@ const Portfolio = () => {
               </div>
 
               {/* CTA */}
-              <div className="flex gap-4 pt-4 animate-[fadeInUp_0.8s_ease_0.9s_backwards]">
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-[fadeInUp_0.8s_ease_0.9s_backwards]">
                 <a
                   href="#contact"
                   onClick={(e) => scrollToSection(e, '#contact')}
-                  className="px-8 py-4 bg-gradient-to-br from-cyan-600 to-violet-600 text-white rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-600/40 no-underline inline-flex items-center gap-2 group"
+                  className="flex-1 py-4 px-8 bg-gradient-to-br from-cyan-600 to-violet-600 text-white rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-cyan-600/40 no-underline flex items-center justify-center gap-2 group"
                 >
                   Let's Work Together
                   <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-200"></i>
@@ -541,7 +525,7 @@ const Portfolio = () => {
                 <a
                   href="#projects"
                   onClick={(e) => scrollToSection(e, '#projects')}
-                  className="px-8 py-4 bg-white border-[1.5px] border-gray-200 text-gray-900 rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-cyan-600/50 hover:bg-cyan-600/5 no-underline inline-flex items-center gap-2"
+                  className="flex-1 py-4 px-8 bg-white border-[1.5px] border-gray-200 text-gray-900 rounded-xl font-bold transition-all duration-200 hover:-translate-y-1 hover:shadow-md hover:border-cyan-600/50 hover:bg-cyan-600/5 no-underline flex items-center justify-center gap-2"
                 >
                   View Work
                 </a>
@@ -578,22 +562,24 @@ const Portfolio = () => {
               </div>
               Figma Design Projects
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-10 auto-rows-auto">
               {figmaProjects.map((project, index) => (
                 <div
                   key={index}
-                  className="bg-white border-[1.5px] border-gray-200 rounded-3xl overflow-hidden transition-all duration-[400ms] hover:-translate-y-3 hover:shadow-2xl hover:border-cyan-600/50 animate-[scaleIn_0.8s_ease_backwards]"
+                  className="bg-white border-[1.5px] border-gray-200 rounded-3xl overflow-hidden transition-all duration-[400ms] hover:-translate-y-3 hover:shadow-2xl hover:border-cyan-600/50 animate-[scaleIn_0.8s_ease_backwards] flex flex-col h-full"
                   style={{ animationDelay: `${0.8 + index * 0.1}s` }}
                 >
                   <div 
-                    className="w-full h-[280px] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group cursor-pointer"
+                    className="w-full aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group cursor-pointer flex-shrink-0"
                     onClick={() => openFigmaModal(project)}
                   >
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1536px) 33vw, 25vw"
                       className="object-cover transition-transform duration-400 group-hover:scale-110 group-hover:rotate-2"
+                      priority={index < 4}
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-violet-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
                       <span className="text-white font-bold text-lg bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/50 flex items-center gap-2 animate-[pulse_2s_ease-in-out_infinite]">
@@ -602,21 +588,21 @@ const Portfolio = () => {
                       </span>
                     </div>
                   </div>
-                  <div className="p-9">
-                    <span className="inline-block px-4 py-[0.4rem] bg-gradient-to-r from-violet-600/10 to-cyan-600/10 border border-violet-600/30 rounded-full text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-cyan-600 uppercase tracking-wide mb-5">
+                  <div className="p-6 md:p-7 lg:p-9 flex flex-col flex-grow">
+                    <span className="inline-block px-4 py-[0.4rem] bg-gradient-to-r from-violet-600/10 to-cyan-600/10 border border-violet-600/30 rounded-full text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-cyan-600 uppercase tracking-wide mb-4 md:mb-5 w-fit">
                       <span className="text-violet-600">{project.category}</span>
                     </span>
-                    <h3 className="text-[1.65rem] font-extrabold mb-4 tracking-[-0.02em] text-gray-900">
+                    <h3 className="text-lg md:text-xl lg:text-[1.65rem] font-extrabold mb-2 md:mb-3 lg:mb-4 tracking-[-0.02em] text-gray-900 line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 leading-[1.7] mb-7 text-base">
+                    <p className="text-sm md:text-base text-gray-600 leading-[1.6] md:leading-[1.7] mb-5 md:mb-6 lg:mb-7 flex-grow">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-[0.6rem]">
+                    <div className="flex flex-wrap gap-2 md:gap-[0.6rem]">
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-4 py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-violet-600 hover:text-violet-600 hover:bg-violet-600/5"
+                          className="px-3 md:px-4 py-[0.35rem] md:py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.7rem] md:text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-violet-600 hover:text-violet-600 hover:bg-violet-600/5 whitespace-nowrap"
                         >
                           {tag}
                         </span>
@@ -636,11 +622,11 @@ const Portfolio = () => {
               </div>
               Development Projects
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 auto-rows-auto">
               {developmentProjects.map((project, index) => (
                 <div
                   key={index}
-                  className="bg-white border-[1.5px] border-gray-200 rounded-3xl overflow-hidden transition-all duration-[400ms] hover:-translate-y-3 hover:shadow-2xl hover:border-violet-600/50 animate-[scaleIn_0.8s_ease_backwards]"
+                  className="bg-white border-[1.5px] border-gray-200 rounded-3xl overflow-hidden transition-all duration-[400ms] hover:-translate-y-3 hover:shadow-2xl hover:border-violet-600/50 animate-[scaleIn_0.8s_ease_backwards] flex flex-col h-full"
                   style={{ animationDelay: `${1.2 + index * 0.1}s` }}
                 >
                   {/* CHANGED: Now opens in new tab */}
@@ -648,13 +634,15 @@ const Portfolio = () => {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full h-[280px] bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group cursor-pointer block"
+                    className="w-full aspect-video bg-gradient-to-br from-gray-100 to-gray-200 relative overflow-hidden group cursor-pointer block flex-shrink-0"
                   >
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                       className="object-cover transition-transform duration-400 group-hover:scale-110 group-hover:rotate-2"
+                      priority={index < 2}
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/20 to-violet-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-center justify-center">
                       <span className="text-white font-bold text-lg bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/50 flex items-center gap-2 animate-[pulse_2s_ease-in-out_infinite]">
@@ -663,21 +651,21 @@ const Portfolio = () => {
                       </span>
                     </div>
                   </a>
-                  <div className="p-9">
-                    <span className="inline-block px-4 py-[0.4rem] bg-gradient-to-r from-cyan-600/10 to-violet-600/10 border border-cyan-600/30 rounded-full text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-600 uppercase tracking-wide mb-5">
+                  <div className="p-6 md:p-7 lg:p-9 flex flex-col flex-grow">
+                    <span className="inline-block px-4 py-[0.4rem] bg-gradient-to-r from-cyan-600/10 to-violet-600/10 border border-cyan-600/30 rounded-full text-xs font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-violet-600 uppercase tracking-wide mb-4 md:mb-5 w-fit">
                       <span className="text-cyan-600">{project.category}</span>
                     </span>
-                    <h3 className="text-[1.65rem] font-extrabold mb-4 tracking-[-0.02em] text-gray-900">
+                    <h3 className="text-lg md:text-xl lg:text-[1.65rem] font-extrabold mb-2 md:mb-3 lg:mb-4 tracking-[-0.02em] text-gray-900 line-clamp-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 leading-[1.7] mb-7 text-base">
+                    <p className="text-sm md:text-base text-gray-600 leading-[1.6] md:leading-[1.7] mb-5 md:mb-6 lg:mb-7 flex-grow">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-[0.6rem]">
+                    <div className="flex flex-wrap gap-2 md:gap-[0.6rem]">
                       {project.tags.map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
-                          className="px-4 py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-cyan-600 hover:text-cyan-600 hover:bg-cyan-600/5"
+                          className="px-3 md:px-4 py-[0.35rem] md:py-[0.45rem] bg-gray-100 border border-gray-200 rounded-full text-[0.7rem] md:text-[0.825rem] font-semibold text-gray-700 transition-all duration-200 hover:border-cyan-600 hover:text-cyan-600 hover:bg-cyan-600/5 whitespace-nowrap"
                         >
                           {tag}
                         </span>
