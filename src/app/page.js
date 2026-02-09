@@ -391,18 +391,18 @@ const Portfolio = () => {
               web technologies to build innovative applications that make a difference.
             </p>
 
-            <div className="flex gap-5 flex-wrap animate-[fadeInUp_0.8s_ease_1s_backwards]">
+            <div className="flex gap-5 flex-wrap mb-8 animate-[fadeInUp_0.8s_ease_1s_backwards]">
               <a
                 href="#projects"
                 onClick={(e) => scrollToSection(e, '#projects')}
-                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-gradient-to-br from-violet-600 to-cyan-600 text-white shadow-lg shadow-violet-600/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-600/40"
+                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-gradient-to-br from-violet-600 to-cyan-600 text-white shadow-lg shadow-violet-600/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-600/40 justify-center w-full sm:w-auto"
               >
                 View Projects
               </a>
               <a
                 href="#contact"
                 onClick={(e) => scrollToSection(e, '#contact')}
-                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-white text-gray-900 border-[1.5px] border-gray-200 shadow-sm hover:border-violet-600/50 hover:-translate-y-1 hover:shadow-md hover:bg-violet-600/5"
+                className="px-10 py-[1.1rem] no-underline rounded-xl font-bold text-base transition-all duration-200 inline-flex items-center gap-[0.6rem] cursor-pointer bg-white text-gray-900 border-[1.5px] border-gray-200 shadow-sm hover:border-violet-600/50 hover:-translate-y-1 hover:shadow-md hover:bg-violet-600/5 justify-center w-full sm:w-auto"
               >
                 Get In Touch
               </a>
@@ -1224,7 +1224,18 @@ const Portfolio = () => {
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <i className="fas fa-github text-cyan-600 mt-1"></i>
+                  <i className="fab fa-linkedin text-cyan-600 mt-1"></i>
+                  <a 
+                    href="https://www.linkedin.com/in/obaid-shaikh-79716639a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-cyan-600 transition-colors duration-200 no-underline"
+                  >
+                    linkedin.com/in/obaid-shaikh
+                  </a>
+                </li>
+                <li className="flex items-start gap-3">
+                  <i className="fab fa-github text-cyan-600 mt-1"></i>
                   <a 
                     href="https://github.com/obaid16"
                     target="_blank"
@@ -1242,9 +1253,7 @@ const Portfolio = () => {
           <div className="border-t border-gray-200 pt-8">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <p className="text-gray-600 text-center">
-                © 2026 Obaidullah Shaikh. All rights reserved. Designed with{' '}
-                <span className="text-cyan-600 font-bold">Figma</span> & built with{' '}
-                <span className="text-cyan-600 font-bold">passion</span>.
+                © 2026 Obaidullah Shaikh. All rights reserved.
               </p>
             </div>
           </div>
