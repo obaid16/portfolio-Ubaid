@@ -189,22 +189,22 @@ const Portfolio = () => {
     {
       title: 'AI For All - AI Aware',
       issuer: 'Intel & Digital India',
-      date: 'January 2026',
+      date: 'July 1, 2026',
       icon: 'fas fa-brain',
       color: 'cyan',
-      image: '/ai-aware-cert.png',
-      badge: '/ai-aware-badge.png',
+      image: '/AI Aware Certificate.png',
+      badge: '/AI AWARE BADGE.png',
       description: 'Completed the AI Aware stage of Intel\'s AI For All program in partnership with Digital India and Central Board of Secondary Education. This certification demonstrates foundational understanding of Artificial Intelligence concepts and their real-world applications.',
       skills: ['AI Fundamentals', 'Machine Learning Basics', 'AI Ethics', 'Real-world AI Applications']
     },
     {
       title: 'AI For All - AI Appreciate',
       issuer: 'Intel & Digital India',
-      date: 'January 2026',
+      date: 'July 1, 2026',
       icon: 'fas fa-brain',
       color: 'violet',
-      image: '/ai-appreciate-cert.png',
-      badge: '/ai-appreciate-badge.png',
+      image: '/AI Appreciate Certificate.png',
+      badge: '/AI APPRECIATE BADGE.png',
       description: 'Successfully completed the AI Appreciate stage of Intel\'s AI For All program. This advanced level certification showcases deeper understanding of AI technologies, their societal impact, and practical implementation strategies.',
       skills: ['Advanced AI Concepts', 'AI Impact Assessment', 'Problem Solving with AI', 'AI Implementation']
     },
@@ -218,6 +218,66 @@ const Portfolio = () => {
       certificateId: 'ZmchD5eq8Y',
       description: 'Successfully completed the Yuva AI For ALL program in English, demonstrating comprehensive understanding of Artificial Intelligence concepts and applications tailored for youth empowerment and skill development.',
       skills: ['AI Literacy', 'Youth Leadership in AI', 'Practical AI Applications', 'Innovation Mindset']
+    },
+    {
+      title: 'Claude 101',
+      issuer: 'ANTHROPIC',
+      date: 'April 2026',
+      icon: 'fas fa-graduation-cap',
+      color: 'violet',
+      image: '/Claude 101.png',
+      description: 'Successfully completed Claude 101 certification from Anthropic. This comprehensive course demonstrates proficiency in understanding and working with Claude AI technologies, prompt engineering, and advanced AI applications.',
+      skills: ['Claude AI', 'Prompt Engineering', 'AI Applications', 'Advanced AI Concepts']
+    },
+    {
+      title: 'AI Fluency: Framework & Foundations',
+      issuer: 'ANTHROPIC',
+      date: 'April 2026',
+      icon: 'fas fa-brain',
+      color: 'cyan',
+      image: '/AI Fluency Framework & Foundations.png',
+      description: 'Completed the AI Fluency Framework & Foundations course from Anthropic. This certification demonstrates comprehensive understanding of AI concepts, frameworks, and foundational principles for building AI literacy.',
+      skills: ['AI Fundamentals', 'Framework Understanding', 'AI Literacy', 'Foundation Concepts']
+    },
+    {
+      title: 'AI Fluency for students',
+      issuer: 'ANTHROPIC',
+      date: 'April 2026',
+      icon: 'fas fa-graduation-cap',
+      color: 'violet',
+      image: '/AI Fluency for students.png',
+      description: 'Successfully completed AI Fluency for Students course from Anthropic. This certification is tailored for students seeking to develop practical AI literacy and skills for academic and professional success.',
+      skills: ['AI for Students', 'Student-Focused Learning', 'Practical AI', 'Career Development']
+    },
+    {
+      title: 'AI Fluency for nonprofits',
+      issuer: 'ANTHROPIC & Giving Tuesday',
+      date: 'April 2026',
+      icon: 'fas fa-handshake',
+      color: 'cyan',
+      image: '/AI Fluency for nonprofits.png',
+      description: 'Completed AI Fluency for Nonprofits certification through Anthropic and Giving Tuesday. This course demonstrates understanding of AI applications and implementation strategies specifically designed for nonprofit organizations and social impact initiatives.',
+      skills: ['AI for Nonprofits', 'Social Impact', 'Organizational Implementation', 'Community Solutions']
+    },
+    {
+      title: 'AI Fluency for educators',
+      issuer: 'ANTHROPIC',
+      date: 'April 2026',
+      icon: 'fas fa-chalkboard-user',
+      color: 'amber',
+      image: '/AI Fluency for educators.png',
+      description: 'Successfully completed AI Fluency for Educators course from Anthropic. This certification equips educators with AI knowledge and practical strategies for teaching AI concepts to students and integrating AI literacy into educational curricula.',
+      skills: ['AI Education', 'Teaching Strategies', 'Curriculum Integration', 'Educator Competency']
+    },
+    {
+      title: 'Teaching the AI Fluency Framework',
+      issuer: 'ANTHROPIC',
+      date: 'April 2026',
+      icon: 'fas fa-book',
+      color: 'violet',
+      image: '/Teaching the AI Fluency Framework.png',
+      description: 'Completed Teaching the AI Fluency Framework certification from Anthropic. This advanced certification demonstrates expertise in delivering educational content about AI fluency frameworks and training others on AI concepts.',
+      skills: ['Framework Teaching', 'AI Education', 'Instructor Knowledge', 'Curriculum Development']
     }
   ];
 
